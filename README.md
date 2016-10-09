@@ -40,13 +40,14 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of required user stories implemented:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Required User Storie Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/bORhqpC.gifv' title='Required User Storie Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Had some problems again with GitKraken, had to create a repo in GitHub with a different name than the local.
+Scrolling with click and hold doesn't work well while recording the gif, used scrolling wheel.
 
 ## Open-source libraries used
 
