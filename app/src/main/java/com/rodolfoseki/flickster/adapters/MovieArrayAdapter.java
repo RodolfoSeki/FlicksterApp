@@ -52,11 +52,23 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie>  {
         tvTitle.setText(movie.getOrigialTitle());
         tvOverview.setText(movie.getOverview());
 
-
+        // depending on the orientation, show poster or backdrop image
         if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-            Picasso.with(getContext()).load(movie.getPosterPath()).into(ivImage);
+            Picasso.with(getContext()).load(movie.getPosterPath())
+                    .fit()
+                    .centerCrop()
+                    .placeholder(R.drawable.loading_p) // current placeholder is ugly, find new to match poster
+                    .error(R.drawable.error_placeholder_portrait)
+                    .into(ivImage);
+
         } else if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            Picasso.with(getContext()).load(movie.getBackdropPath()).into(ivImage);
+            Picasso.with(getContext()).load(movie.getBackdropPath())
+                    .fit()
+                    .centerCrop()
+                    .placeholder(R.drawable.loading_l) // current placeholder is ugly, find new to match backdrop
+                    .error(R.drawable.error_placeholder_landscape) // can also be a drawable
+                    .into(ivImage);
+
         }
         // return the view
         return convertView;
